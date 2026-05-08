@@ -38,7 +38,7 @@
           <a href="https://huggingface.co/datasets/shawnzzzh/AgenticDataBench" target="_blank" rel="noopener noreferrer" class="hero-link">
             📦 Dataset
           </a>
-          <a href="#" class="hero-link">
+          <a v-if="false" href="#" class="hero-link">
             📄 Paper
           </a>
           <a href="https://github.com/AgenticDataBench/AgenticDataBench" target="_blank" rel="noopener noreferrer" class="hero-link">
