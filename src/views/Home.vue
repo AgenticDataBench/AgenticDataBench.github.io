@@ -92,7 +92,7 @@
       </section>
 
       <!-- Dataset Info -->
-      <section class="section dataset-section">
+      <section v-if="false" class="section dataset-section">
         <h2 class="section-heading">Dataset &amp; Ground Truth</h2>
         <p class="section-body">
           AgenticDataBench is built on real-world data science tasks collected from 15 domains including finance, healthcare, e-commerce, climate, and more.
