@@ -111,19 +111,19 @@
         <div class="benchmark-grid">
           <div class="benchmark-item">
             <h3 class="benchmark-title">📁 Datasets</h3>
-            <p class="benchmark-desc">Download from HuggingFace → <code>testbed/datasets/</code></p>
+            <p class="benchmark-desc">Download from HuggingFace → <a href="https://github.com/AgenticDataBench/AgenticDataBench/tree/main/testbed/datasets" target="_blank" rel="noopener noreferrer"><code>testbed/datasets/</code></a></p>
           </div>
           <div class="benchmark-item">
             <h3 class="benchmark-title">🛠️ Skills</h3>
-            <p class="benchmark-desc"><code>skill_cluster/data/skill-descriptions.jsonl</code></p>
+            <p class="benchmark-desc"><a href="https://github.com/AgenticDataBench/AgenticDataBench/blob/main/skill_cluster/data/skill-descriptions.jsonl" target="_blank" rel="noopener noreferrer"><code>skill_cluster/data/skill-descriptions.jsonl</code></a></p>
           </div>
           <div class="benchmark-item">
             <h3 class="benchmark-title">📋 Tasks</h3>
-            <p class="benchmark-desc"><code>testbed/tasks</code></p>
+            <p class="benchmark-desc"><a href="https://github.com/AgenticDataBench/AgenticDataBench/tree/main/testbed/tasks" target="_blank" rel="noopener noreferrer"><code>testbed/tasks</code></a></p>
           </div>
           <div class="benchmark-item">
             <h3 class="benchmark-title">✅ Ground-truth</h3>
-            <p class="benchmark-desc"><code>testbed/gold</code></p>
+            <p class="benchmark-desc"><a href="https://github.com/AgenticDataBench/AgenticDataBench/tree/main/testbed/gold" target="_blank" rel="noopener noreferrer"><code>testbed/gold</code></a></p>
           </div>
         </div>
         <p class="section-body" style="margin-top: 16px;">
