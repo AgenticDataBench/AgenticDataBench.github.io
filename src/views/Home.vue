@@ -105,6 +105,32 @@
         </p>
       </section>
 
+      <!-- Benchmark Data -->
+      <section class="section benchmark-section">
+        <h2 class="section-heading">Benchmark Data</h2>
+        <div class="benchmark-grid">
+          <div class="benchmark-item">
+            <h3 class="benchmark-title">📁 Datasets</h3>
+            <p class="benchmark-desc">Download from HuggingFace → <code>testbed/datasets/</code></p>
+          </div>
+          <div class="benchmark-item">
+            <h3 class="benchmark-title">🛠️ Skills</h3>
+            <p class="benchmark-desc"><code>skill_cluster/data/skill-descriptions.jsonl</code></p>
+          </div>
+          <div class="benchmark-item">
+            <h3 class="benchmark-title">📋 Tasks</h3>
+            <p class="benchmark-desc"><code>testbed/tasks</code></p>
+          </div>
+          <div class="benchmark-item">
+            <h3 class="benchmark-title">✅ Ground-truth</h3>
+            <p class="benchmark-desc"><code>testbed/gold</code></p>
+          </div>
+        </div>
+        <p class="section-body" style="margin-top: 16px;">
+          For leaderboard integrity, we withhold 100 tasks as a private test set. These tasks will be publicly released once the benchmark loses its evaluation significance.
+        </p>
+      </section>
+
       <!-- Submission -->
       <section class="section submission-section">
         <h2 class="section-heading">Submission</h2>
@@ -390,6 +416,39 @@ function handleSubscribe() {
 
 .subscribe-input {
   flex: 1;
+}
+
+.benchmark-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.benchmark-item {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.benchmark-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.benchmark-desc {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.benchmark-desc code {
+  background: var(--color-bg-code);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
 }
 
 .citation-block {
