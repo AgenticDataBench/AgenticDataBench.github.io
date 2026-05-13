@@ -1,6 +1,6 @@
 <template>
   <a-table
-    :columns="columns"
+    :columns="visibleColumns"
     :data-source="data"
     :pagination="false"
     :scroll="{ x: 700 }"
@@ -29,30 +29,42 @@
         </a>
         <span v-else style="color: var(--color-text-secondary);">-</span>
       </template>
-      <template v-if="column.key === 'test'">
-        <strong v-if="record.rank === 1">{{ record.test }}%</strong>
-        <span v-else>{{ record.test }}%</span>
+      <template v-if="column.key === 'score'">
+        <strong v-if="record.rank === 1">{{ scoreValue(record) }}%</strong>
+        <span v-else>{{ scoreValue(record) }}%</span>
       </template>
     </template>
   </a-table>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { LeaderboardEntry } from '../types'
 
-defineProps<{
+const props = defineProps<{
   data: LeaderboardEntry[]
+  mode: string
 }>()
 
-const columns = [
+const baseColumns = [
   { title: 'Rank', key: 'rank', width: 80 },
   { title: 'Agent', key: 'agent', width: 180 },
   { title: 'Model', key: 'model', width: 160 },
   { title: 'Code', key: 'code', width: 60, align: 'center' as const },
   { title: 'Size', dataIndex: 'size', key: 'size', width: 80 },
-  { title: 'Dev (%)', dataIndex: 'dev', key: 'dev', width: 80, align: 'right' as const },
-  { title: 'Test (%)', key: 'test', width: 80, align: 'right' as const },
 ]
+
+const devColumn = { title: 'Dev Accuracy', key: 'score', width: 100, align: 'right' as const }
+const testColumn = { title: 'Test Accuracy', key: 'score', width: 100, align: 'right' as const }
+
+const visibleColumns = computed(() => {
+  const scoreColumn = props.mode === 'custom' ? testColumn : devColumn
+  return [...baseColumns, scoreColumn]
+})
+
+function scoreValue(record: LeaderboardEntry) {
+  return props.mode === 'custom' ? record.test : record.dev
+}
 </script>
 
 <style scoped>

@@ -212,15 +212,7 @@
             </a-radio-group>
           </div>
 
-          <!-- Filters -->
-          <div class="lb-filters">
-            <a-select v-model:value="lbMetric" style="width: 100%;" size="small" placeholder="Select metric">
-              <a-select-option value="test">Test Accuracy</a-select-option>
-              <a-select-option value="dev">Dev Accuracy</a-select-option>
-            </a-select>
-          </div>
-
-          <Leaderboard :data="leaderboardData" />
+          <Leaderboard :data="leaderboardData" :mode="lbMode" />
 
           <a-empty v-if="leaderboardData.length === 0" description="No submissions yet" style="margin-top: 16px;" />
 
@@ -240,7 +232,6 @@ import Leaderboard from '../components/Leaderboard.vue'
 import type { LeaderboardEntry } from '../types'
 const subscribeEmail = ref('')
 const lbMode = ref('devset')
-const lbMetric = ref('test')
 
 const leaderboardData = ref<LeaderboardEntry[]>([])
 
