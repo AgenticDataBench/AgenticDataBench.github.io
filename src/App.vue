@@ -3,6 +3,7 @@
     <a-layout-header class="app-header">
       <div class="header-inner">
         <router-link to="/" class="logo-link">
+          <img src="/logo.png" alt="AgenticDataBench" class="logo-icon" />
           <span class="logo-title">AgenticDataBench</span>
         </router-link>
         <a class="header-link" href="https://github.com/AgenticDataBench/AgenticDataBench" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -14,7 +15,7 @@
     <a-layout-footer class="app-footer">
       <div class="footer-content">
         <p class="footer-text">
-          AgenticDataBench &copy; 2026 &mdash; A Realistic and Diverse Data Agent Benchmark
+          AgenticDataBench &copy; 2026 &mdash; A Realistic and Diverse Data Agent Benchmark with Fine-Grained Skill Labels
         </p>
         <div class="footer-links">
           <a href="https://github.com/AgenticDataBench/AgenticDataBench" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -57,6 +58,12 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
 }
 
 .logo-title {

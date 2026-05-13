@@ -6,7 +6,7 @@
       <section class="section hero-section">
         <h1 class="hero-greeting">Hi! AgenticDataBench</h1>
         <p class="hero-desc">
-          AgenticDataBench is a realistic and diverse benchmark for evaluating data agents with fine-grained skill labels.
+          AgenticDataBench is a realistic and diverse data agent benchmark with fine-grained skill labels.
           It covers <strong>354 data science tasks</strong> across <strong>15 domains</strong>,
           built on <strong>97 real-world datasets</strong> (27.3 GB, 135.9M rows) with
           <strong>433 fine-grained ground-truth labels</strong>.
@@ -101,7 +101,7 @@
         <p class="section-body">
           To mitigate data leakage, ground-truth labels and test cases are not publicly released.
           To request access to the evaluation ground truth, please email
-          <code>agentic-databench@example.com</code> with the tag <strong>[AgenticDataBench GT]</strong> in the subject line.
+          <code>agenticdatabench@gmail.com</code> with the tag <strong>[AgenticDataBench GT]</strong> in the subject line.
         </p>
       </section>
 
@@ -161,7 +161,7 @@
           </div>
         </div>
         <p class="section-body" style="margin-top: 16px;">
-          Send submissions to <code>agentic-databench@example.com</code>.
+          Send submissions to <code>agenticdatabench@gmail.com</code>.
           Our team will review and add results to the leaderboard within 3-5 business days.
         </p>
       </section>
@@ -185,10 +185,10 @@
       </section>
 
       <!-- Citation -->
-      <section class="section citation-section">
+      <section v-if="false" class="section citation-section">
         <h2 class="section-heading">Citation</h2>
         <pre class="citation-block">@article{agenticdatabench2026,
-  title        = {AgenticDataBench: A Comprehensive Benchmark for Data Agents},
+  title        = {AgenticDataBench: A Realistic and Diverse Data Agent Benchmark with Fine-Grained Skill Labels},
   author       = {...},
   journal      = {...},
   year         = {2026}
