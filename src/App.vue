@@ -6,8 +6,7 @@
           <img src="/logo.png" alt="AgenticDataBench" class="logo-icon" />
           <span class="logo-title">AgenticDataBench</span>
         </router-link>
-        <a class="header-link" href="https://github.com/AgenticDataBench/AgenticDataBench" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
+              </div>
     </a-layout-header>
     <a-layout-content class="app-content">
       <router-view />
