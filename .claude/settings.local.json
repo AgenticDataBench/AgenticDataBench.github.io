@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(pkill -f \"vite\")",
+      "mcp__plugin_ecc_exa__web_fetch_exa",
+      "mcp__plugin_ecc_github__get_file_contents",
+      "Bash(npx gh-pages *)",
+      "Bash(git -C /Users/gilfoyle/workspace/ai-research/AgenticDataBench.github.io add docs/submission-guidelines.md)",
+      "Bash(git -C /Users/gilfoyle/workspace/ai-research/AgenticDataBench.github.io commit -m ' *)",
+      "Bash(git -C /Users/gilfoyle/workspace/ai-research/AgenticDataBench.github.io push)",
+      "Bash(git fetch *)",
+      "Bash(git ls-tree *)",
+      "Bash(git checkout *)",
+      "Bash(git rm *)",
+      "Bash(git branch *)",
+      "Bash(curl -s https://agenticdatabench.github.io/)",
+      "Bash(curl -sI https://agenticdatabench.github.io/assets/index-CcDztJUr.js)",
+      "Bash(curl -sI https://agenticdatabench.github.io/src/main.ts)",
+      "Bash(gh api *)"
+    ]
+  }
+}
