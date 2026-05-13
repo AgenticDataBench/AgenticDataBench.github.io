@@ -163,6 +163,8 @@
         <p class="section-body" style="margin-top: 16px;">
           Send submissions to <code>agenticdatabench@163.com</code>.
           Our team will review and add results to the leaderboard within 3-5 business days.
+          For detailed submission guidelines, please refer to the
+          <a href="https://docs.google.com/document/d/1Ao0-oaOM5FhQfEJ_od2aP6IixQrt-SfFhmTq1M8NKRg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Submission Document</a>.
         </p>
       </section>
 
