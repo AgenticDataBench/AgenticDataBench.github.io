@@ -101,7 +101,7 @@
         <p class="section-body">
           To mitigate data leakage, ground-truth labels and test cases are not publicly released.
           To request access to the evaluation ground truth, please email
-          <code>agenticdatabench@gmail.com</code> with the tag <strong>[AgenticDataBench GT]</strong> in the subject line.
+          <code>agenticdatabench@163.com</code> with the tag <strong>[AgenticDataBench GT]</strong> in the subject line.
         </p>
       </section>
 
@@ -161,7 +161,7 @@
           </div>
         </div>
         <p class="section-body" style="margin-top: 16px;">
-          Send submissions to <code>agenticdatabench@gmail.com</code>.
+          Send submissions to <code>agenticdatabench@163.com</code>.
           Our team will review and add results to the leaderboard within 3-5 business days.
         </p>
       </section>
