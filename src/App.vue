@@ -2,19 +2,18 @@
   <a-layout class="app-layout">
     <a-layout-header class="app-header">
       <div class="header-inner">
-        <div class="header-left">
+        <div class="header-partners">
           <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer" class="partner-link" title="Tsinghua University">
             <img src="/tsinghua.png" alt="Tsinghua University" class="partner-icon partner-icon-wide" />
           </a>
           <a href="https://intl.antdigital.com/en" target="_blank" rel="noopener noreferrer" class="partner-link" title="Ant Digital Technologies">
             <img src="/antdigital.png" alt="Ant Digital Technologies" class="partner-icon" />
           </a>
-          <span class="header-divider"></span>
-          <router-link to="/" class="logo-link">
-            <img src="/logo.png" alt="AgenticDataBench" class="logo-icon" />
-            <span class="logo-title">AgenticDataBench</span>
-          </router-link>
         </div>
+        <span class="header-divider"></span>
+        <router-link to="/" class="logo-link">
+          <span class="logo-title">AgenticDataBench</span>
+        </router-link>
       </div>
     </a-layout-header>
     <a-layout-content class="app-content">
@@ -58,12 +57,13 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
-.header-left {
+.header-partners {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .partner-link {
@@ -99,14 +99,7 @@
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
-}
-
-.logo-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 4px;
 }
 
 .logo-title {
