@@ -58,15 +58,13 @@
             <h3 class="mode-card-title">🎯 DevSet Evaluation</h3>
             <p class="mode-card-desc">
               Evaluate agents on the standard DevSet benchmark. Submit a .jsonl results file via email and get accuracy scores across skills and domains.
-              This is a <strong>passive mode</strong> where the evaluation workflow is fixed.
             </p>
           </div>
           <div class="mode-card">
-            <h3 class="mode-card-title">🚀 Custom Code Evaluation</h3>
+            <h3 class="mode-card-title">🚀 TestSet Evaluation</h3>
             <p class="mode-card-desc">
               Submit your agent code archive via email for sandboxed execution and evaluation.
               The system captures execution traces for detailed analysis.
-              This is an <strong>active mode</strong> where the workflow is dynamic and led by the agent.
             </p>
           </div>
         </div>
@@ -150,12 +148,12 @@
             <p class="email-hint">Attach: .jsonl results file</p>
           </div>
           <div class="submit-card">
-            <h3 class="submit-card-title">🚀 Custom Code Evaluation</h3>
+            <h3 class="submit-card-title">🚀 TestSet Evaluation</h3>
             <p class="submit-card-desc">
               Submit your agent code archive for sandboxed execution.
             </p>
             <div class="email-format">
-              <code>[AgenticDataBench-Custom][Team][Method][Model]</code>
+              <code>[AgenticDataBench-TestSet][Team][Method][Model]</code>
             </div>
             <p class="email-hint">Attach: .tar.gz or .zip code archive</p>
           </div>
@@ -208,7 +206,7 @@
           <div class="lb-mode-switch">
             <a-radio-group v-model:value="lbMode" button-style="solid" size="small">
               <a-radio-button value="devset">DevSet</a-radio-button>
-              <a-radio-button value="custom">Custom</a-radio-button>
+              <a-radio-button value="custom">TestSet</a-radio-button>
             </a-radio-group>
           </div>
 
