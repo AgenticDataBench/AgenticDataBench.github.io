@@ -2,11 +2,20 @@
   <a-layout class="app-layout">
     <a-layout-header class="app-header">
       <div class="header-inner">
-        <router-link to="/" class="logo-link">
-          <img src="/logo.png" alt="AgenticDataBench" class="logo-icon" />
-          <span class="logo-title">AgenticDataBench</span>
-        </router-link>
-              </div>
+        <div class="header-left">
+          <a href="https://www.tsinghua.edu.cn/en" target="_blank" rel="noopener noreferrer" class="partner-link" title="Tsinghua University">
+            <img src="/tsinghua.svg" alt="Tsinghua University" class="partner-icon" />
+          </a>
+          <a href="https://intl.antdigital.com/en" target="_blank" rel="noopener noreferrer" class="partner-link" title="Ant Digital Technologies">
+            <img src="/antdigital.svg" alt="Ant Digital Technologies" class="partner-icon" />
+          </a>
+          <span class="header-divider"></span>
+          <router-link to="/" class="logo-link">
+            <img src="/logo.png" alt="AgenticDataBench" class="logo-icon" />
+            <span class="logo-title">AgenticDataBench</span>
+          </router-link>
+        </div>
+      </div>
     </a-layout-header>
     <a-layout-content class="app-content">
       <router-view />
@@ -49,7 +58,36 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.partner-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.partner-link:hover {
+  opacity: 1;
+}
+
+.partner-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.header-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .logo-link {
