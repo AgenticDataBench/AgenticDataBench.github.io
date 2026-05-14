@@ -111,7 +111,7 @@
         <div class="benchmark-grid">
           <div class="benchmark-item">
             <h3 class="benchmark-title">📁 Datasets</h3>
-            <p class="benchmark-desc">Download from HuggingFace → <a href="https://github.com/AgenticDataBench/AgenticDataBench/tree/main/testbed/datasets" target="_blank" rel="noopener noreferrer"><code>testbed/datasets/</code></a></p>
+            <p class="benchmark-desc">Download from HuggingFace → <a href="https://huggingface.co/datasets/shawnzzzh/AgenticDataBench" target="_blank" rel="noopener noreferrer"><code>testbed/datasets/</code></a></p>
           </div>
           <div class="benchmark-item">
             <h3 class="benchmark-title">🛠️ Skills</h3>
