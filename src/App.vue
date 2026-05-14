@@ -3,11 +3,11 @@
     <a-layout-header class="app-header">
       <div class="header-inner">
         <div class="header-left">
-          <a href="https://www.tsinghua.edu.cn/en" target="_blank" rel="noopener noreferrer" class="partner-link" title="Tsinghua University">
-            <img src="/tsinghua.svg" alt="Tsinghua University" class="partner-icon" />
+          <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer" class="partner-link" title="Tsinghua University">
+            <img src="/tsinghua.png" alt="Tsinghua University" class="partner-icon partner-icon-wide" />
           </a>
           <a href="https://intl.antdigital.com/en" target="_blank" rel="noopener noreferrer" class="partner-link" title="Ant Digital Technologies">
-            <img src="/antdigital.svg" alt="Ant Digital Technologies" class="partner-icon" />
+            <img src="/antdigital.png" alt="Ant Digital Technologies" class="partner-icon" />
           </a>
           <span class="header-divider"></span>
           <router-link to="/" class="logo-link">
@@ -82,6 +82,12 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+
+.partner-icon-wide {
+  width: auto;
+  height: 28px;
+  border-radius: 2px;
 }
 
 .header-divider {
