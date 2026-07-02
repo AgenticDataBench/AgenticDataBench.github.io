@@ -14,7 +14,7 @@
 
         <div class="hero-stats">
           <div class="stat-item">
-            <span class="stat-num">354</span>
+            <span class="stat-num">344</span>
             <span class="stat-label">Tasks</span>
           </div>
           <div class="stat-divider"></div>
@@ -31,6 +31,10 @@
           <div class="stat-item">
             <span class="stat-num">433</span>
             <span class="stat-label">Skill Labels</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">84%~90%</span>
+            <span class="stat-label">Human Performance</span>
           </div>
         </div>
 
