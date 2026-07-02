@@ -7,8 +7,8 @@
         <h1 class="hero-greeting">Hi! AgenticDataBench</h1>
         <p class="hero-desc">
           AgenticDataBench is a realistic and diverse data agent benchmark with fine-grained skill labels.
-          It covers <strong>354 data science tasks</strong> across <strong>15 domains</strong>,
-          built on <strong>97 real-world datasets</strong> (27.3 GB, 135.9M rows) with
+          It covers <strong>344 data science tasks</strong> across <strong>15 domains</strong>,
+          built on <strong>97 real-world datasets</strong> (27.3 GB, 123.1M rows) with
           <strong>433 fine-grained ground-truth labels</strong>.
         </p>
 
