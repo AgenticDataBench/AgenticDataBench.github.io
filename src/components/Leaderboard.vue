@@ -1,7 +1,7 @@
 <template>
   <a-table
     :columns="visibleColumns"
-    :data-source="data"
+    :data-source="sortedData"
     :pagination="false"
     :scroll="{ x: 700 }"
     size="small"
@@ -57,14 +57,34 @@ const baseColumns = [
 const devColumn = { title: 'Dev Accuracy', key: 'score', width: 100, align: 'right' as const }
 const testColumn = { title: 'Test Accuracy', key: 'score', width: 100, align: 'right' as const }
 
+// 'custom' corresponds to the TestSet tab; anything else is the DevSet tab.
+const isTestMode = computed(() => props.mode === 'custom')
+
 const visibleColumns = computed(() => {
-  const scoreColumn = props.mode === 'custom' ? testColumn : devColumn
+  const scoreColumn = isTestMode.value ? testColumn : devColumn
   return [...baseColumns, scoreColumn]
 })
 
 function scoreValue(record: LeaderboardEntry) {
-  return props.mode === 'custom' ? record.test : record.dev
+  return isTestMode.value ? record.test : record.dev
 }
+
+// Parse a score string (e.g. "34.46") into a number suitable for sorting.
+function scoreNumber(record: LeaderboardEntry): number {
+  const raw = isTestMode.value ? record.test : record.dev
+  const n = parseFloat(raw)
+  return isNaN(n) ? -Infinity : n
+}
+
+// Sort by the accuracy of the currently active tab and recompute ranks so that
+// DevSet is ordered by Dev Accuracy and TestSet is ordered by Test Accuracy.
+// The static `rank` coming from the JSON is only meaningful for one of the two
+// metrics, so it must be recomputed here for the other view to be correct.
+const sortedData = computed<LeaderboardEntry[]>(() => {
+  return [...props.data]
+    .sort((a, b) => scoreNumber(b) - scoreNumber(a))
+    .map((record, index) => ({ ...record, rank: index + 1 }))
+})
 </script>
 
 <style scoped>
