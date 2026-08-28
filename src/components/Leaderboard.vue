@@ -30,8 +30,8 @@
         <span v-else style="color: var(--color-text-secondary);">-</span>
       </template>
       <template v-if="column.key === 'score'">
-        <strong v-if="record.rank === 1">{{ scoreValue(record) }}%</strong>
-        <span v-else>{{ scoreValue(record) }}%</span>
+        <strong v-if="record.rank === 1">{{ scoreText(record) }}</strong>
+        <span v-else>{{ scoreText(record) }}</span>
       </template>
     </template>
   </a-table>
@@ -65,13 +65,19 @@ const visibleColumns = computed(() => {
   return [...baseColumns, scoreColumn]
 })
 
-function scoreValue(record: LeaderboardEntry) {
+function scoreValue(record: LeaderboardEntry): string | undefined {
   return isTestMode.value ? record.test : record.dev
+}
+
+function scoreText(record: LeaderboardEntry): string {
+  const score = scoreValue(record)
+  return score ? `${score}%` : '—'
 }
 
 // Parse a score string (e.g. "34.46") into a number suitable for sorting.
 function scoreNumber(record: LeaderboardEntry): number {
-  const raw = isTestMode.value ? record.test : record.dev
+  const raw = scoreValue(record)
+  if (!raw) return -Infinity
   const n = parseFloat(raw)
   return isNaN(n) ? -Infinity : n
 }
@@ -82,6 +88,7 @@ function scoreNumber(record: LeaderboardEntry): number {
 // metrics, so it must be recomputed here for the other view to be correct.
 const sortedData = computed<LeaderboardEntry[]>(() => {
   return [...props.data]
+    .filter((record) => scoreNumber(record) !== -Infinity)
     .sort((a, b) => scoreNumber(b) - scoreNumber(a))
     .map((record, index) => ({ ...record, rank: index + 1 }))
 })

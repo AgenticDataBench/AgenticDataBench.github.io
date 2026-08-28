@@ -8,5 +8,5 @@ export interface LeaderboardEntry {
   size: string
   date: string
   dev: string
-  test: string
+  test?: string
 }

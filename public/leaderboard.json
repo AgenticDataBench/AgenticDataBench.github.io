@@ -1,6 +1,18 @@
 [
   {
     "rank": 1,
+    "agent": "aiwork",
+    "agentAffiliation": "ANTGROUP DIGITAL TECHNOLOGIES",
+    "model": "Claude Opus 4.8",
+    "modelAffiliation": "Anthropic",
+    "code": "https://aiwork.dtagi.cn/home",
+    "size": "UNK",
+    "date": "Aug 28, 2026",
+    "dev": "48.49",
+    "test": "47.73"
+  },
+  {
+    "rank": 2,
     "agent": "Codex",
     "agentAffiliation": "OpenAI",
     "model": "Kimi-K2.5",
@@ -12,7 +24,7 @@
     "test": "47.28"
   },
   {
-    "rank": 2,
+    "rank": 3,
     "agent": "Smolagents",
     "agentAffiliation": "Huggingface",
     "model": "Qwen3.5-397B-A17B",
@@ -24,7 +36,7 @@
     "test": "46.13"
   },
   {
-    "rank": 3,
+    "rank": 4,
     "agent": "Smolagents",
     "agentAffiliation": "Huggingface",
     "model": "Claude Sonnet 4.6",
@@ -36,7 +48,7 @@
     "test": "46.10"
   },
   {
-    "rank": 4,
+    "rank": 5,
     "agent": "DA-Agent",
     "agentAffiliation": "CAS",
     "model": "Qwen3.5-397B-A17B",
@@ -48,7 +60,7 @@
     "test": "45.94"
   },
   {
-    "rank": 5,
+    "rank": 6,
     "agent": "DA-Agent",
     "agentAffiliation": "CAS",
     "model": "Claude Sonnet 4.6",
@@ -60,7 +72,7 @@
     "test": "45.43"
   },
   {
-    "rank": 6,
+    "rank": 7,
     "agent": "Claude Code",
     "agentAffiliation": "Anthropic",
     "model": "Claude Sonnet 4.6",
@@ -72,7 +84,7 @@
     "test": "43.62"
   },
   {
-    "rank": 7,
+    "rank": 8,
     "agent": "Smolagents",
     "agentAffiliation": "Huggingface",
     "model": "Kimi-K2.5",
@@ -84,7 +96,7 @@
     "test": "42.69"
   },
   {
-    "rank": 8,
+    "rank": 9,
     "agent": "Claude Code",
     "agentAffiliation": "Anthropic",
     "model": "Kimi-K2.5",
@@ -96,7 +108,7 @@
     "test": "42.21"
   },
   {
-    "rank": 9,
+    "rank": 10,
     "agent": "Claude Code",
     "agentAffiliation": "Anthropic",
     "model": "Qwen3.5-397B-A17B",
@@ -108,7 +120,7 @@
     "test": "41.95"
   },
   {
-    "rank": 10,
+    "rank": 11,
     "agent": "Codex",
     "agentAffiliation": "OpenAI",
     "model": "Qwen3.5-397B-A17B",
@@ -120,7 +132,7 @@
     "test": "41.56"
   },
   {
-    "rank": 11,
+    "rank": 12,
     "agent": "DA-Agent",
     "agentAffiliation": "CAS",
     "model": "Kimi-K2.5",
@@ -132,7 +144,7 @@
     "test": "39.08"
   },
   {
-    "rank": 12,
+    "rank": 13,
     "agent": "Codex",
     "agentAffiliation": "OpenAI",
     "model": "Claude Sonnet 4.6",
@@ -142,5 +154,27 @@
     "date": "Jul 02, 2026",
     "dev": "31.83",
     "test": "31.13"
+  },
+  {
+    "rank": 14,
+    "agent": "fabric-rlm",
+    "agentAffiliation": "Microsoft",
+    "model": "MiniMax M3",
+    "modelAffiliation": "MiniMax",
+    "code": "https://github.com/pawarbi/fabric-rlm-core",
+    "size": "428B",
+    "date": "Aug 03, 2026",
+    "dev": "47.98"
+  },
+  {
+    "rank": 15,
+    "agent": "fabric-rlm",
+    "agentAffiliation": "Microsoft",
+    "model": "Kimi-K2.5",
+    "modelAffiliation": "Kimi",
+    "code": "https://github.com/pawarbi/fabric-rlm-core",
+    "size": "1T",
+    "date": "Aug 03, 2026",
+    "dev": "46.89"
   }
 ]
