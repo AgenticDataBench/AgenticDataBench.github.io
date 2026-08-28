@@ -1,7 +1,7 @@
 [
   {
     "rank": 1,
-    "agent": "aiwork",
+    "agent": "AiWork",
     "agentAffiliation": "ANTGROUP DIGITAL TECHNOLOGIES",
     "model": "Claude Opus 4.8",
     "modelAffiliation": "Anthropic",
@@ -157,7 +157,7 @@
   },
   {
     "rank": 14,
-    "agent": "fabric-rlm",
+    "agent": "Fabric-RLM",
     "agentAffiliation": "Microsoft",
     "model": "MiniMax M3",
     "modelAffiliation": "MiniMax",
@@ -168,7 +168,7 @@
   },
   {
     "rank": 15,
-    "agent": "fabric-rlm",
+    "agent": "Fabric-RLM",
     "agentAffiliation": "Microsoft",
     "model": "Kimi-K2.5",
     "modelAffiliation": "Kimi",
