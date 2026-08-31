@@ -6,9 +6,6 @@
           <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer" class="partner-link" title="Tsinghua University">
             <img src="/tsinghua.png" alt="Tsinghua University" class="partner-icon partner-icon-wide" />
           </a>
-          <a href="https://intl.antdigital.com/en" target="_blank" rel="noopener noreferrer" class="partner-link" title="Ant Digital Technologies">
-            <img src="/antdigital.png" alt="Ant Digital Technologies" class="partner-icon" />
-          </a>
         </div>
         <span class="header-divider"></span>
         <router-link to="/" class="logo-link">
