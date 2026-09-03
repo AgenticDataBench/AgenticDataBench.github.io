@@ -209,8 +209,8 @@
           <!-- Mode Switcher like BIRD -->
           <div class="lb-mode-switch">
             <a-radio-group v-model:value="lbMode" button-style="solid" size="small">
-              <a-radio-button value="devset">DevSet</a-radio-button>
               <a-radio-button value="custom">TestSet</a-radio-button>
+              <a-radio-button value="devset">DevSet</a-radio-button>
             </a-radio-group>
           </div>
 
@@ -233,7 +233,7 @@ import { message } from 'ant-design-vue'
 import Leaderboard from '../components/Leaderboard.vue'
 import type { LeaderboardEntry } from '../types'
 const subscribeEmail = ref('')
-const lbMode = ref('devset')
+const lbMode = ref('custom')
 
 const leaderboardData = ref<LeaderboardEntry[]>([])
 
