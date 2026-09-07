@@ -176,5 +176,17 @@
     "size": "1T",
     "date": "Aug 03, 2026",
     "dev": "46.89"
+  },
+  {
+    "rank": 16,
+    "agent": "AiWork",
+    "agentAffiliation": "Ant Digital Technologies",
+    "model": "Kimi-K2.5",
+    "modelAffiliation": "Kimi",
+    "code": "https://aiwork.dtagi.cn/home",
+    "size": "1T",
+    "date": "Sep 7, 2026",
+    "dev": "48.58",
+    "test": "47.09"
   }
 ]
