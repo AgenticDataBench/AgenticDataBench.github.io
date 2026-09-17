@@ -5,7 +5,6 @@
       <!-- Hero Section -->
       <section class="section hero-section">
         <h1 class="hero-greeting">Hi! AgenticDataBench</h1>
-        <p class="publication-badge">Accepted at <strong>VLDB 2027</strong></p>
         <p class="hero-desc">
           AgenticDataBench is a realistic and diverse data agent benchmark with fine-grained skill labels.
           It covers <strong>344 data science tasks</strong> across <strong>15 domains</strong>,
@@ -53,6 +52,21 @@
         </div>
       </section>
 
+      <!-- News -->
+      <section class="section news-section" aria-labelledby="news-heading">
+        <h2 id="news-heading" class="section-heading">News</h2>
+        <ul class="news-list">
+          <li class="publication-news">
+            <span class="news-category">Paper acceptance</span>
+            <h3 class="news-title">Accepted at <strong>VLDB 2027</strong></h3>
+            <p class="news-paper">AgenticDataBench: A Comprehensive Benchmark for Data Agents</p>
+            <a class="news-paper-link" href="https://arxiv.org/abs/2607.01647" target="_blank" rel="noopener noreferrer">
+              Read the paper <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
       <!-- Evaluation Modes -->
       <section class="section modes-section">
         <h2 class="section-heading">Evaluation Modes</h2>
@@ -72,25 +86,6 @@
               Submit your agent code archive via email for sandboxed execution and evaluation.
               The system captures execution traces for detailed analysis.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- News Section -->
-      <section v-if="false" class="section news-section">
-        <h2 class="section-heading">News</h2>
-        <div class="news-list">
-          <div class="news-item news-highlight">
-            <span class="news-date">Apr 28, 2026</span>
-            <span class="news-text">AgenticDataBench backend launched with distributed scheduling, gVisor container sandboxing, and email-based submission integration.</span>
-          </div>
-          <div class="news-item">
-            <span class="news-date">Apr 24, 2026</span>
-            <span class="news-text">Frontend redesigned with a cleaner, more modern interface inspired by BIRD-Interact.</span>
-          </div>
-          <div class="news-item">
-            <span class="news-date">Apr 15, 2026</span>
-            <span class="news-text">Initial benchmark results released for DevSet evaluation across multiple frontier models.</span>
           </div>
         </div>
       </section>
@@ -346,16 +341,6 @@ function handleSubscribe() {
   margin-bottom: 16px;
 }
 
-.publication-badge {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 6px 14px;
-  border: 1px solid var(--color-primary);
-  border-radius: 999px;
-  color: var(--color-primary);
-  font-size: 14px;
-}
-
 .hero-links {
   flex-wrap: wrap;
 }
@@ -395,19 +380,55 @@ function handleSubscribe() {
   margin-top: 8px;
 }
 
-.news-item {
-  padding: 10px 0;
-  gap: 12px;
+.publication-news {
+  padding: 20px 22px;
+  border: 1px solid #dce5f1;
+  border-left: 3px solid var(--color-brand);
+  border-radius: 0 8px 8px 0;
+  background: linear-gradient(110deg, #f3f7fe, #fafcff);
 }
 
-.news-date {
-  font-size: 12px;
-  min-width: 100px;
+.news-category {
+  display: inline-block;
+  padding: 3px 8px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  background: #e5edfc;
+  color: #31599b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.news-text {
+.news-title {
+  margin-bottom: 8px;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.news-title strong {
+  font-weight: 700;
+}
+
+.news-paper {
+  margin-bottom: 16px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #596579;
+}
+
+.news-paper-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.news-paper-link:hover {
+  text-decoration: underline;
 }
 
 .submit-grid {
