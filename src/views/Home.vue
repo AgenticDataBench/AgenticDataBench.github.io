@@ -5,6 +5,7 @@
       <!-- Hero Section -->
       <section class="section hero-section">
         <h1 class="hero-greeting">Hi! AgenticDataBench</h1>
+        <p class="publication-badge">Accepted at <strong>VLDB 2027</strong></p>
         <p class="hero-desc">
           AgenticDataBench is a realistic and diverse data agent benchmark with fine-grained skill labels.
           It covers <strong>344 data science tasks</strong> across <strong>15 domains</strong>,
@@ -42,12 +43,13 @@
           <a href="https://huggingface.co/datasets/shawnzzzh/AgenticDataBench" target="_blank" rel="noopener noreferrer" class="hero-link">
             📦 Dataset
           </a>
-          <a v-if="false" href="#" class="hero-link">
+          <a href="https://arxiv.org/abs/2607.01647" target="_blank" rel="noopener noreferrer" class="hero-link">
             📄 Paper
           </a>
           <a href="https://github.com/AgenticDataBench/AgenticDataBench" target="_blank" rel="noopener noreferrer" class="hero-link">
             💻 Code
           </a>
+          <router-link :to="{ path: '/', hash: '#citation' }" class="hero-link">📚 Cite us</router-link>
         </div>
       </section>
 
@@ -189,14 +191,18 @@
       </section>
 
       <!-- Citation -->
-      <section v-if="false" class="section citation-section">
-        <h2 class="section-heading">Citation</h2>
-        <pre class="citation-block">@article{agenticdatabench2026,
-  title        = {AgenticDataBench: A Realistic and Diverse Data Agent Benchmark with Fine-Grained Skill Labels},
-  author       = {...},
-  journal      = {...},
-  year         = {2026}
-}</pre>
+      <section id="citation" class="section citation-section" aria-labelledby="citation-heading">
+        <h2 id="citation-heading" class="section-heading">Citation</h2>
+        <p class="section-body">
+          Feel free to cite us
+          (<a href="https://arxiv.org/abs/2607.01647" target="_blank" rel="noopener noreferrer">paper link</a>)
+          if you like this project.
+        </p>
+        <div class="citation-toolbar">
+          <span>BibTeX</span>
+          <a-button size="small" @click="copyCitation">Copy BibTeX</a-button>
+        </div>
+        <pre class="citation-block" tabindex="0" aria-label="BibTeX citation"><code>{{ citation }}</code></pre>
       </section>
     </div>
 
@@ -234,6 +240,23 @@ import Leaderboard from '../components/Leaderboard.vue'
 import type { LeaderboardEntry } from '../types'
 const subscribeEmail = ref('')
 const lbMode = ref('custom')
+const citation = `@article{sun2026agenticdatabench,
+  title         = {AgenticDataBench: A Comprehensive Benchmark for Data Agents},
+  author        = {Zhaoyan Sun and Shan Zhong and Daizhou Wen and Jiaxing Han and Guoliang Li and Ying Yan and Peng Zhang and Yu Su and Xiang Qi and Baolin Sun and Chengyuan Yang and Tao Fang and Huaiyu Ruan},
+  year          = {2026},
+  eprint        = {2607.01647},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DB}
+}`
+
+async function copyCitation() {
+  try {
+    await navigator.clipboard.writeText(citation)
+    message.success('BibTeX copied to clipboard.')
+  } catch {
+    message.info('Please select and copy the BibTeX below.')
+  }
+}
 
 const leaderboardData = ref<LeaderboardEntry[]>([])
 
@@ -262,7 +285,7 @@ function handleSubscribe() {
 <style scoped>
 .home-layout {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   gap: 40px;
   max-width: 1400px;
   margin: 0 auto;
@@ -321,6 +344,20 @@ function handleSubscribe() {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 16px;
+}
+
+.publication-badge {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 6px 14px;
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
+.hero-links {
+  flex-wrap: wrap;
 }
 
 .hero-stats {
@@ -446,9 +483,29 @@ function handleSubscribe() {
   font-size: 12px;
 }
 
+.citation-section {
+  scroll-margin-top: 80px;
+}
+
+.citation-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
 .citation-block {
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.citation-block code {
+  padding: 0;
 }
 
 .leaderboard-section {
@@ -469,7 +526,7 @@ function handleSubscribe() {
 
 @media (max-width: 1024px) {
   .home-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
 
@@ -480,7 +537,8 @@ function handleSubscribe() {
   }
 
   .modes-grid,
-  .submit-grid {
+  .submit-grid,
+  .benchmark-grid {
     grid-template-columns: 1fr;
   }
 
