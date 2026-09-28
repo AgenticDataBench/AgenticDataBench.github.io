@@ -3,13 +3,12 @@
     "rank": 1,
     "agent": "AiWork",
     "agentAffiliation": "Ant Digital Technologies",
-    "model": "Claude Opus 4.8",
-    "modelAffiliation": "Anthropic",
+    "model": "GLM-5.3-Flash",
+    "modelAffiliation": "Zhipu AI",
     "code": "https://aiwork.dtagi.cn/home",
-    "size": "UNK",
-    "date": "Aug 28, 2026",
-    "dev": "48.49",
-    "test": "47.73"
+    "size": "320B",
+    "date": "Sep 28, 2026",
+    "test": "47.60"
   },
   {
     "rank": 2,
