@@ -11,6 +11,11 @@
         <router-link to="/" class="logo-link">
           <span class="logo-title">AgenticDataBench</span>
         </router-link>
+        <nav class="header-nav" aria-label="Main navigation">
+          <router-link :to="{ path: '/', hash: '#leaderboard' }" class="header-link">Leaderboard</router-link>
+          <router-link :to="{ path: '/', hash: '#news-heading' }" class="header-link">Updates</router-link>
+          <a href="https://github.com/AgenticDataBench/AgenticDataBench" target="_blank" rel="noopener noreferrer" class="header-link">GitHub ↗</a>
+        </nav>
       </div>
     </a-layout-header>
     <a-layout-content class="app-content">
@@ -50,7 +55,7 @@
 }
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -113,6 +118,17 @@
   transition: color 0.2s;
 }
 
+.header-nav { margin-left: auto; display: flex; gap: 24px; align-items: center; }
+.header-nav .header-link { font-size: 12px; }
+@media (max-width: 600px) {
+  .app-header { padding: 0 16px; }
+  .header-partners, .header-divider { display: none; }
+  .logo-title { font-size: 15px; }
+  .header-nav { gap: 12px; }
+  .header-nav .header-link { font-size: 10px; }
+  .header-nav .header-link:last-child { display: none; }
+}
+
 .header-link:hover {
   color: #fff;
 }
@@ -153,5 +169,12 @@
 
 .footer-links a:hover {
   color: var(--color-brand);
+}
+
+@media (min-width: 1101px) {
+  .app-layout { height: 100dvh; min-height: 0; overflow: hidden; }
+  .app-header { flex: 0 0 56px; }
+  .app-content { flex: 1; min-height: 0; overflow: hidden; }
+  .app-footer { flex-shrink: 0; padding: 12px 24px; }
 }
 </style>

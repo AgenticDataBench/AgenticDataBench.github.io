@@ -7,10 +7,11 @@ import {
   Table,
   Input,
   Button,
-  RadioGroup,
-  RadioButton,
-  Empty,
-  ConfigProvider,
+  Checkbox,
+  Modal,
+  Tooltip,
+  Alert,
+  Spin,
 } from 'ant-design-vue'
 import 'ant-design-vue/dist/reset.css'
 import './assets/styles/global.css'
@@ -19,7 +20,6 @@ import router from './router'
 
 const app = createApp(App)
 app.use(router)
-app.use(ConfigProvider)
 app.component('ALayout', Layout)
 app.component('ALayoutHeader', LayoutHeader)
 app.component('ALayoutContent', LayoutContent)
@@ -27,7 +27,9 @@ app.component('ALayoutFooter', LayoutFooter)
 app.component('ATable', Table)
 app.component('AInput', Input)
 app.component('AButton', Button)
-app.component('ARadioGroup', RadioGroup)
-app.component('ARadioButton', RadioButton)
-app.component('AEmpty', Empty)
+app.component('ACheckbox', Checkbox)
+app.component('AModal', Modal)
+app.component('ATooltip', Tooltip)
+app.component('AAlert', Alert)
+app.component('ASpin', Spin)
 app.mount('#app')

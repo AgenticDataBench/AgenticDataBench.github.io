@@ -1,0 +1,40 @@
+{
+  "defaultVersion": "v1.1",
+  "versions": [
+    {
+      "id": "v1.1",
+      "label": "Updated evaluator",
+      "date": "2026-10-12",
+      "dataFile": "leaderboard.json",
+      "title": "Table evaluation update",
+      "summary": "Improved handling of numeric tolerance and missing values in table scoring.",
+      "changes": [
+        "Improved numeric tolerance matching for CSV and SQLite tables when row order is ignored.",
+        "Fixed comparisons that incorrectly matched a numeric value with a missing value (NaN) on the other side."
+      ],
+      "notice": "Only results scored with the v1.1 evaluator are ranked here.",
+      "taskCounts": {
+        "test": 98,
+        "dev": 246
+      }
+    },
+    {
+      "id": "v1.0",
+      "label": "Original evaluator",
+      "date": "2026-07-02",
+      "dataFile": "leaderboards/v1.0.json",
+      "title": "AgenticDataBench v1.0",
+      "summary": "A benchmark for evaluating data agents on realistic, diverse data science tasks.",
+      "changes": [
+        "Covers 344 tasks across 15 domains, built on 97 real-world datasets.",
+        "Provides 433 fine-grained ground-truth skill labels.",
+        "Supports DevSet and private TestSet evaluation."
+      ],
+      "notice": "You are viewing historical scores from the original evaluator. Select v1.1 for the latest evaluated results. Scores across evaluator versions are not directly interchangeable.",
+      "taskCounts": {
+        "test": 98,
+        "dev": 246
+      }
+    }
+  ]
+}
