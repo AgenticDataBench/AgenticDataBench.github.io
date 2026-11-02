@@ -217,7 +217,7 @@ const versionData = ref<Record<string, LeaderboardEntry[]>>({})
 const loading = ref(true)
 const loadError = ref('')
 const search = ref('')
-const showChanges = ref(true)
+const showChanges = ref(false)
 const historyOpen = ref(false)
 const submissionOpen = ref(false)
 const selectedVersionId = computed(() => {
