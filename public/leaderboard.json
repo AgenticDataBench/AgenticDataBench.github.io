@@ -152,5 +152,15 @@
     "date": "Jul 02, 2026",
     "dev": 32.099503543078555,
     "test": 32.03107968975856
+  },
+  {
+    "agent": "Genius Lab",
+    "agentAffiliation": "DIGITS PGEO",
+    "model": "Qwen 3.8 27B",
+    "modelAffiliation": "Tongyi Lab, Alibaba Group",
+    "code": "#",
+    "size": "27B",
+    "date": "Nov 02, 2026",
+    "dev": 42.95
   }
 ]
