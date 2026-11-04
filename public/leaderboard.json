@@ -156,7 +156,7 @@
   {
     "agent": "Genius Lab",
     "agentAffiliation": "DIGITS PGEO",
-    "model": "Qwen 3.8 27B",
+    "model": "Qwen3.8-27B",
     "modelAffiliation": "Tongyi Lab, Alibaba Group",
     "code": "#",
     "size": "27B",
