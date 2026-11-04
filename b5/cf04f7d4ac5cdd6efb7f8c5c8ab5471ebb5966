@@ -1,0 +1,19 @@
+public/leaderboard.json
+  s_c69ed37993a5af::t_e24b04d891d802 159
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "b5cf04f7d4ac5cdd6efb7f8c5c8ab5471ebb5966",
+  "prompts": {},
+  "sessions": {
+    "s_c69ed37993a5af": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a19a5a-9d43-77d3-9eb1-0b83e0efe236",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "wendaizhou <wendaizhou.wdz@antgroup.com>"
+    }
+  }
+}
